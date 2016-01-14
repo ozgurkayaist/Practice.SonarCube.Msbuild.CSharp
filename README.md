@@ -2,7 +2,7 @@
 Best Practice with SonarCube for your Visual Studio Projects
 ===================
 
-** Prerequisites**
+** A. Prerequisites **
 
 A Java runtime is required for SonarQube to run. Supported JVMs:
 
