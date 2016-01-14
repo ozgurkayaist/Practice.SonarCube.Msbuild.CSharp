@@ -11,7 +11,7 @@ Java (Oracle JRE 7 or greater or OpenJDK 7 or greater). (Java SE Runtime Environ
 Microsoft SQL Server 2008 or higher required. It must be set to UTF-8, language set to English, and collation to CS (case sensitive) and AS (accent sensitive).
 
 
-Download and install latest "Microsoft Build Tools 2015". There is no need to install full Visual Studio 2015 version.
+Download and install latest "[Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)". There is no need to install full Visual Studio 2015 version.
 
 
 Download latest or LTS "[SonarQube Server](http://www.sonarqube.org/downloads/)" package
@@ -71,7 +71,7 @@ Open "C:\sonar\sonarqube-4.5.6\logs" and be sure there is no ERRORs like SQL con
 
 ## Test Sonar Server
 
-Open a browser which has enabled javascipt execution.
+Open a browser which has enabled javascript execution.
 
 Navigate to **http://localhost:9080**
 
