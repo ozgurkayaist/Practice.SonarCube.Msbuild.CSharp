@@ -73,7 +73,7 @@ Open "C:\sonar\sonarqube-4.5.6\logs" and be sure there is no ERRORs like SQL con
 
 Open a browser which has enabled javascipt execution.
 
-Navigate to http://localhost:9080
+Navigate to **http://localhost:9080**
 
 If this is the first time you are using SonarQube, the default admin credentialsare:
 - Username: admin
