@@ -1,4 +1,5 @@
 
+![enter image description here](https://raw.githubusercontent.com/ozgurkayaist/Practice.SonarCube.Msbuild.CSharp/master/images/banner.png)
 Best Practice with SonarCube for your Visual Studio Projects
 ===================
 
@@ -102,7 +103,7 @@ Find a system variabled named "**Path**"  CLick EDIT.
 Add this string at the end of the line "**;C:\sonar\MSBuild.SonarQube.Runner-1.1**"
 
 
-## Create a windows batch file and Schele it with like Jenkins, Windows task scheduler..
+## Create a windows batch file
 
 Create a bat file like "Sonar.Develop.bat". Copy the following lines in it. Change the directory which has the .sln file in it.
 
@@ -117,6 +118,31 @@ Create a bat file like "Sonar.Develop.bat". Copy the following lines in it. Chan
     "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /t:Rebuild "C:\Program Files (x86)\Jenkins\workspace\YOURPATHTO_MSBUILD_SOLUTION2\SomePath\MYPROJECT.sln"
     MSBuild.SonarQube.Runner.exe end
     ::========================
+    
+## Schedule Batch file with Jenkins
+
+Copy the batch file to this location "C:\sonar\Scripts\Sonar.Develop.Analyser.bat"
+
+Create a freestyle jenkins job. ([Version Number Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Version+Number+Plugin) must be installed before)
+
+Check Create a formatted version number and create an env. variable name like the screenshot.
+
+Check Build periodically and set it with cron string. 
+Example:
+
+    H 4 * * *  
+
+This value will be execute the job, @04:00 AM every night.
+
+Add Execute Windows batch command build task. The following commands will send the batch file the version number. Which has named "%1" @batch script.
+
+    cd C:\sonar\scripts
+    call "C:\sonar\scripts\Sonar.Develop.Analyser.bat" %VERSION%
+
+## Advanced settings
+[C# Unit Test Execution Results Import](http://docs.sonarqube.org/display/PLUG/C#+Unit+Test+Execution+Results+Import)
+
+[C# Code Coverage Results Import](http://docs.sonarqube.org/display/PLUG/C#+Code+Coverage+Results+Import)
 
 
 
