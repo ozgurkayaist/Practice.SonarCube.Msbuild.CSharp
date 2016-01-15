@@ -26,7 +26,7 @@ All Your downloaded code repository like (TFS build server/ Jenkins workspace/..
 
 ## Install Sonar Server
 
-Copy **sonarqube-4.5.6.zip** and **jre-8u45-windows-xXX.exe** to your downloaded code repository 
+Copy **sonarqube-4.5.6.zip** to your downloaded code repository 
 
 Extract zip files to "C:\sonar\sonarqube-4.5.6".
 
@@ -105,7 +105,9 @@ Add this string at the end of the line "**;C:\sonar\MSBuild.SonarQube.Runner-1.1
 
 ## Create a windows batch file
 
-Create a bat file like "Sonar.Develop.bat". Copy the following lines in it. Change the directory which has the .sln file in it.
+Create a bat file like "Sonar.Develop.Analyser.bat"
+
+Copy the following lines in it. Change the directory which has the .sln file in it.
 
     ::======THIS IS MY FIRST CODE ANALYSIS==================
     cd C:\Program Files (x86)\Jenkins\workspace\YOURPATHTO_MSBUILD_SOLUTION1
